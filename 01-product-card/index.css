@@ -1,1 +1,164 @@
-/* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+:root {
+  --shaft: #2f2f2f;
+
+  --color-text: var(--shaft);
+  --font-size-text: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  font-size: var(--font-size-text);
+  line-height: 24px;
+  color: var(--color-text);
+  background: #f6f6f6;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 72px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #ffffff;
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: 482px;
+  box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__image {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 213.75px;
+}
+
+.card__info {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card__title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 16px;
+}
+
+.card__description {
+  flex-grow: 1;
+  overflow: hidden;
+  max-height: 96px;
+  margin-bottom: 24.25px;
+}
+
+.card__button {
+  text-transform: uppercase;
+  padding: 10px 0;
+  background-color: #fff;
+  border: 2px solid #42940f;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  color: #42940f;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.card__button:hover {
+  background: #42940f;
+  color: #fff;
+}
+
+.card__button:active {
+  background: #1f5200;
+  border: 2px solid #1f5200;
+  color: #fff;
+}
+
+.card__button:disabled {
+  color: #fff;
+  background: #4e4e4e;
+  border: 1px solid #4e4e4e;
+  cursor: not-allowed;
+}
+
+.card__labels {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px 16.73px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16.73px;
+}
+
+.label {
+  font-weight: 400;
+  padding: 0 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background: #fdcff3;
+}
+
+.label--last {
+  background: #ffcf56;
+}
+
+@media (max-width: 415px) {
+  .title {
+    font-size: 32px;
+  }
+  .cards {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .card__labels {
+    gap: 5px;
+  }
+  .label {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+}
